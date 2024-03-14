@@ -1,0 +1,111 @@
+﻿
+@model RegistrationModel
+
+@{
+    ViewData["Title"] = "New User";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+@{
+    <style>
+          
+        
+    </style>
+}
+
+<section class="content">
+
+    <div class="container pt-5">
+
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-@(TempData["MessageType"]) alert-dismissible fade show" role="alert">
+                @TempData["Message"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+
+        <div class="mt-5">
+           
+
+                <div class="pt-2">
+                    <h3>Add New User</h3>
+                </div>
+
+
+                <form class="p-5" method="post">
+
+
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Select Profile Picture</label>
+                        <input class="form-control" type="file" id="formFile" asp-for="ProfilePic"
+                               onchange="document.getElementById('profilepic').src = window.URL.createObjectURL(this.files[0])">
+                               
+                    </div>
+
+                    <img id="profilepic" src="~/img/placeholer1.png" />
+
+                    <div class="mt-2">
+                        <label class="form-label" asp-for="Username"></label>
+                        <input class="form-control" asp-for="Username" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label class="form-label" asp-for="Email"></label>
+                        <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                    </div>
+
+                    <div>
+                        <label class="form-label" asp-for="Name"></label>
+                        <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+
+                    <div>
+                        <label class="form-label" asp-for="Surname"></label>
+                        <input class="form-control" asp-for="Surname" />
+                    <span asp-validation-for="Surname" class="text-danger"></span>
+
+                    </div>
+
+                    <div>
+                        <input class="form-control" asp-for="Password" value="12345@Ag" hidden="hidden" />
+
+                    </div>
+
+                    <div>
+                        <input class="form-control" asp-for="PasswordComfirm" value="12345@Ag" hidden="hidden" />
+                    </div>
+
+                    <div>
+                        <label class="form-label" asp-for="Role">Select Role</label>
+                        <select class="form-select" aria-label="Default select example" asp-for="Role">
+                            <option value="Admin">Admin</option>
+                            <option value="Employee">Employee</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+
+                    </div>
+
+                    @{
+                        if (Model != null)
+                        {
+                            Model.Password = "12345*Ag";
+                            Model.PasswordComfirm = "12345*Ag";
+                        }
+
+                    }
+
+                    <div class="pt-3">
+                        <button class="btn btn-success" type="submit" asp-action="NewUser">Submit</button>
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</section>

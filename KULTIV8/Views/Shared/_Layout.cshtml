@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KULTIV8</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/post_detail.css" asp-append-version="true" />
+    
+    <link rel="stylesheet" href="~/css/post_style.css" />
+    <link rel="stylesheet" href="~/css/services_style.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="~/KULTIV8.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+    <header>
+        <section class="navigation">
+            <nav class="shadow navbar navbar-expand-lg p-4">
+                <div class="container-fluid">
+                    
+                    <strong><a class="logo" asp-action="Index" asp-controller="Home">Kultiv8 Consulting</a></strong>
+                    <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="ourvalues">Our Values</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="testimonials">Testimonial</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Blog" asp-controller="Post">Blog</a>
+                            </li>
+
+                            @if(User.IsInRole("admin") || User.IsInRole("employee")){
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-action="Index" asp-controller="Post">Dashboard</a>
+                                </li>
+                            }
+
+                            @if(User.IsInRole("admin") || User.IsInRole("employee") || User.IsInRole("guest")){
+                               
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-action="Logout" asp-controller="User">Log Out</a>
+                                </li>
+                            }
+
+                            else{
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-action="Login" asp-controller="User">Sign In</a>
+                                </li>
+                            }
+
+                         @*   
+                            <li class="nav-item p-0">
+                                <a class="btn btn-primary text-white" asp-action="Index" asp-controller="Contact">Contact Us</a>
+                            </li>
+                            *@
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        
+    </header>
+
+    <div >
+         <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+ 
+    <footer class="footer footer-section mt-5 pt-4 pt-md-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-sm-3 pt-md-5">
+                    <h2 class="border-bottom pb-3 footer-logo">Kultiv8 Consulting</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Somewhere in Joburg :)
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">011-123-456</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw" src="img/mail.png"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-sm-3 pt-md-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Services</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#services">Market Research / Career Guidance</a></li>
+                        <li><a class="text-decoration-none" href="#services">LinkedIn Revamp / CV Writing</a></li>
+                        <li><a class="text-decoration-none" href="#services">Campus Seminars / Group Presentations</a></li>
+                        <li><a class="text-decoration-none" href="#services">Interview Preparation</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-sm-3 pt-md-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#home">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Blog</a></li>
+                        <li><a class="text-decoration-none" href="#about">About</a></li>
+                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

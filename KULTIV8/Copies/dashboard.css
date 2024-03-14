@@ -1,0 +1,224 @@
+﻿:root {
+    --secondaryBlue: #244055;
+    --blue: rgb(51, 89, 118);
+}
+
+html{
+    height: 100vh;
+}
+body {
+    position: relative;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 100px;
+    height: 100vh;
+}
+
+header {
+    overflow: hidden;
+    position: fixed;
+    min-width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+
+.navigation {
+    background-color: var(--blue);
+}
+
+
+.logo {
+    text-decoration: none;
+}
+
+.navigation a {
+    color: white;
+    font-size: 20px;
+}
+
+.navigation .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.side-nav {
+    background-color: var(--secondaryBlue);
+    position: fixed;
+    bottom: 0;
+    width: 230px;
+    height: 100vh;
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.side-nav li, .side-nav li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+
+.side-nav ul {
+    margin-top: 50px;
+}
+
+.side-nav li {
+    padding-top: 50px;
+}
+
+svg{
+   margin-right: 20px;
+}
+
+.heading {
+    padding-left: 80px;
+    font-weight: bolder;
+}
+
+.content{
+    margin-left: 240px;
+}
+
+.page-heading {
+   color:rgb(51, 89, 118);
+}
+
+/*Posts Page*/
+.post a {
+    text-decoration: none;
+    color: black;
+}
+
+.post h2 {
+    font-family: NSimSun;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.post img {
+    max-width: 100%;
+    min-height: 229px;
+    max-height: 229px;
+    object-fit: cover;
+}
+
+.ck-editor__editable {
+    min-height: 250px;
+}
+
+.empty {
+    width: 800px;
+    margin: auto;
+    color: var(--bluw)
+}
+
+.no-content{
+    min-height: 100%;
+    text-align:center;
+}
+    .no-content img {
+        opacity: 0.9;
+        max-width: 100px;
+    }
+
+
+   
+
+footer {
+    background-color: var(--blue);
+}
+    footer div {
+        min-width: 100%;
+        margin: auto;
+        min-height: 50px;
+        
+    }
+
+        footer p {
+            color: white;
+        }
+
+
+        /*Large Screens*/
+@media screen and (max-width:768px) {
+    body {
+
+    }
+
+    
+
+    .content {
+        margin-left: 80px;
+    }
+
+    /*.side-nav {
+        max-width: 75px;
+        overflow: unset;
+        transition: width 0.3s ease;
+        overflow: hidden;
+    }
+
+        .side-nav ul {
+            width: 300px;
+            margin-left: -7px;
+        }*/
+    .side-nav.show {
+        display: block; /* Show side nav when it has the 'show' class */
+    }
+    .side-nav {
+        display: none; /* Hide side nav on small screens */
+    }
+
+    .content {
+        margin-left: 0; /* Adjust content margin to accommodate the hidden side nav */
+    }
+
+}
+/*Larger SCreens*/
+@media screen and (max-width: 992px) {
+    .content {
+        margin-left: 0; /* Adjust content margin to accommodate the hidden side nav */
+    }
+}
+
+
+/*Mobile Devices*/
+@media screen and (max-width:576px) {
+
+    .navigation .logo, .navigation p {
+        font-size: 12px;
+    }
+    .side-nav {
+        /*max-width: 40px;*/
+        /*overflow: unset;*/
+        transition: width 0.3s ease;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+        .side-nav ul {
+            width: 200px;
+            margin-left: -25px;
+            margin-top: 20px;
+        }
+
+        .side-nav li {
+            padding-top: 30px;
+        }
+
+    .no-content h4 {
+        font-size: 15px;
+    }
+
+    svg{
+        width: 10px; 
+    }
+}
+
+
+

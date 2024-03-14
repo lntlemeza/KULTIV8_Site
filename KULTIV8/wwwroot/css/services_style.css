@@ -1,0 +1,95 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300;1,400&family=Noto+Serif+HK&family=Rokkitt&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/services-background.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+.services h2 {
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+
+.how-it-works {
+    margin-bottom: 80px;
+}
+
+    .how-it-works h3, .services h2 {
+        background-color: white;
+    }
+
+
+.card-steps {
+    background-color: rgb(51,89,118);
+    color: white;
+    padding: 15px;
+    transition: 1s;
+}
+
+    .card-steps:hover {
+        transform: scale(1.05);
+    }
+
+    .card-steps .card-title {
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .card-steps .card-text {
+        letter-spacing: 2px;
+    }
+
+
+h5 {
+    font-family: 'Rokkitt', serif;
+}
+
+.price {
+    text-decoration: underline;
+}
+
+
+.package {
+    transition: 1s;
+}
+
+    .package:hover {
+        transform: scale(1.05);
+    }
+
+/*Laptops*/
+@media screen and (min-width: 770px) {
+
+    .services h2 {
+        width: 50%;
+    }
+}
+
+/* Tablts */
+@media screen and (max-width:768px) {
+    body {
+        background-image: none;
+    }
+
+    .footer-section h2 {
+        font-size: 20px;
+    }
+}
+
+/*Mobile Devicea*/
+@media screen and (max-width:576px) {
+    body {
+        background-image: none;
+    }
+
+    .services h2 {
+        line-height: 32px;
+    }
+}

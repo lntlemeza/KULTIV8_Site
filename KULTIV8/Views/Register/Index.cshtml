@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KULTIV8</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/register_style.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="~/KULTIV8.styles.css" asp-append-version="true" />*@
+</head>
+
+
+
+<section class="form">
+    <div class="container p-5">
+        <div class="row container-box ">
+            <div class="col-lg-4 reg-img">
+                <img class="img-fluid" src="~/img/main2.jpg" />
+            </div>
+
+            <div class="col-lg-7 ms-lg-5">
+
+                <div class=" row my-lg-5 my-sm-4">
+                    <h1>Register</h1>
+                </div>
+
+                <form class="row gx-1" action="">
+
+
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Name">
+                        <label for="floatingInput">Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Surname">
+                        <label for="floatingInput">Surname</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-6">
+                          <input type="email" class="form-control" id="floatingInput" placeholder="Email Address">
+                          <label for="floatingInput">Email address</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Date Of Birth">
+                        <label for="floatingInput">Date Of Birth</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Password">
+                        <label for="floatingInput">Password</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Confirm Password">
+                        <label for="floatingInput">Confirm Password</label>
+                    </div>
+
+                    <button class="btn btn-register mt-4">Register</button>
+                </form>
+        </div>
+        </div>
+    </div>
+    
+   
+</div>
+</section>
+

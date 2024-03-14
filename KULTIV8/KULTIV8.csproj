@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Copies\dashboard.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\bootswatch.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Copies\dashboard.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="wwwroot\ckeditor5-build-classic\ckeditor.d.ts" />
+    <None Include="wwwroot\ckeditor5-build-classic\ckeditor.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\ckeditor.js.map" />
+    <None Include="wwwroot\ckeditor5-build-classic\index.html" />
+    <None Include="wwwroot\ckeditor5-build-classic\LICENSE.md" />
+    <None Include="wwwroot\ckeditor5-build-classic\README.md" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\css\sample.css" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\bg.png" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\github.svg" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\logo.svg" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\umbrellas.jpg" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\af.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ar.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ast.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\az.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bg.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bs.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ca.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\cs.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\da.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\de-ch.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\de.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\el.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\en-au.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\en-gb.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\eo.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\es-co.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\es.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\et.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\eu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fa.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\gl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\gu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\he.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\id.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\it.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ja.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\jv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\km.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\kn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ko.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ku.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\lt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\lv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ms.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\nb.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ne.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\nl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\no.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\oc.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pt-br.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ro.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ru.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\si.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sq.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sr-latn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\th.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ug.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\uk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ur.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\uz.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\vi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\zh-cn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\zh.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\img\post\covers\" />
+    <Folder Include="wwwroot\img\post\intext\" />
+  </ItemGroup>
+
+</Project>

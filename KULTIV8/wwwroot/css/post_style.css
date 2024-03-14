@@ -1,0 +1,263 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+
+/*Hero Section*/
+
+.blog-heading {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.blog-heading h2 {
+    font-family:  NSimSun;
+    font-size: 60px;
+    justify-content: center;
+    align-content: center;
+    color:var(--blue);
+    font-weight:bold;
+}
+
+form{
+    /*max-height: 200px;*/
+}
+.hero {
+    padding: 0 30px;
+}
+
+.hero hr {
+    color: var(--blue);
+    height: 2px;
+    
+}
+
+/*.hero-image{
+    overflow: hidden;
+}*/
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.lead-post {
+    max-width: 130rem;
+    margin-bottom: 30px;
+}
+
+    .lead-post img {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .lead-post a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+
+
+.lead-post h5 {
+    font-size: 30px;
+    font-family: NSimSun;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-weight:500;
+}
+
+.lead-post p {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+    .latest-nav {
+        max-width: 100%;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+.latest-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.latest-top h2 {
+    font-family: NSimSun;
+}
+
+.latest-top a {
+    text-decoration: none;
+    
+}
+
+    .latest-top h3 {
+        font-size: 15px;
+        color: black;
+        margin:0;
+    }
+
+        .latest-top h3:hover {
+            text-decoration: underline;
+            transition: ease 0.1s;
+        }
+
+        .latest-posts-list {
+            margin-left: 20px;
+        }
+
+    .latest-posts-list div {
+        padding-top: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .latest-posts-list h5 {
+        color: #787979;
+        font-size: 16px;
+    }
+
+    .latest-posts-list h4 {
+        
+        font-size: 20px;
+    }
+
+
+.latest-posts-list a {
+    text-decoration: none;
+    color: black;
+}
+
+    .latest-posts-list div:hover {
+        color: rgb(51, 89, 118);
+        text-decoration: underline;
+    }
+
+/*Posts Page*/
+.post a {
+    text-decoration: none;
+    color: black;
+}
+
+.post h2{
+    font-family: NSimSun;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.post img{
+    max-width: 100%;
+    min-height: 229px;
+    max-height: 229px;
+    object-fit: cover;
+}
+
+.date, .author {
+    color: #787979;
+}
+
+.blog-post {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.blog-card{
+    min-width: 100%;
+}
+
+.no-content{
+    text-align: center;
+}
+
+
+.no-content img{
+
+    max-width: 200px;
+    opacity: 0.9;
+}
+
+
+
+/*BLog End*/
+.services-cta {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 5px solid var(--blue); /* Add border */
+    padding: 30px; /* Add top padding */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+
+    .services-cta h2 {
+        font-size: 24px;
+        color: var(--blue);
+    }
+
+    .services-cta p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .services-cta:hover {
+        border-color: #007bff; /* Change border color on hover */
+    }
+
+
+    
+
+
+
+/*Media Queries*/
+/*Laptops*/
+@media screen and (min-width: 770px) {
+   
+    .logo {
+        font-size: 25px;
+    }
+
+    .footer-section h2 {
+        font-size: 25px;
+    }
+}
+
+/* Tablts */
+@media screen and (max-width:768px) {
+
+    .footer-section h2 {
+        font-size: 20px;
+    }
+
+    .blog-heading h2{
+        font-size: 30px;
+    }
+
+    .lead-post img {
+        
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+    
+    }
+}
+
+/*Mobile Devicea*/
+@media (max-width: 576px) {
+    .post-items {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .lead-post img {
+        max-width: 10rem;
+    }
+
+    .latest-nav {
+        max-width: 100%;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}

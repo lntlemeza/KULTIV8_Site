@@ -1,0 +1,56 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300;1,400&family=Noto+Serif+HK&display=swap');
+
+
+/******** Post Detail Page ***********/
+
+.post-title h2{
+    font-size: 60px;
+    color: var(--blue);
+}
+
+.cover-photo {
+    overflow: hidden;
+}
+
+    .cover-photo img {
+        width: 100%;
+        height: 500px;
+        height: auto;
+    }
+
+.post-content {
+    line-height: 2;
+}
+
+    h2, .post-content h2, .post-content h3, .post-content h1 {
+        font-family: 'Noto Serif HK', serif;
+        font-weight: bolder;
+    }
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+    .image img {
+        width: 60%;
+        margin: 25px 0 20px 0;
+    }
+
+.date, .author {
+    color: #787979;
+}
+
+
+/*Mobile Devices*/
+@media screen and (max-width:576px) {
+
+    .post-title h2 {
+        font-size: 30px;
+    }
+    
+    .date, .author {
+        font-size: 15px;
+    }
+}

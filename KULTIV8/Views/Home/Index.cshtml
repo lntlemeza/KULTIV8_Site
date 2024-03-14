@@ -1,0 +1,276 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (TempData["LoginMessage"] != null)
+{
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		@TempData["LoginMessage"]
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+<!-- Home  -->
+<section class="home-section mb-sm-5 pt-5" id="home">
+	<div class="container d-flex justify-content-center">
+		<div class="home text-center">
+			<div class="row align-items-center">
+				<div class="col-sm main-image">
+					<div>
+						<img class="shadow p-2" src="~/img/main2.jpg" alt="main-image">
+					</div>
+				</div>
+				<div class="col-sm text-start pt-4 quote">
+					<div>
+						<h2>We offer you quality, first-hand guidance in terms of your career development.</h2>
+						<p class="pt-3">With our extensive knowledge and expertise within the human resource and talent management world, we are your trusted partner in bringing forth the change you wish to see in your career and business.</p>
+					</div>
+					<div>
+						<a class="btn btn-primary" asp-controller="Packages" asp-action="Index">View Our Service Packages</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- About  -->
+<section class="about-section mt-4 p-4" id="about">
+	<div class="container">
+		<div class="mb-4 p-md-4 ps-md-5">
+			<h1>About</h1>
+		</div>
+		<div class="ps-md-5 pe-md-5 pb-4">
+			<p class="">Kultiv8 Consulting is your preparation and career coaching partner, founded in 2018 with a focus on personal growth through innovation.</p>
+
+			<p> With roughly over 50% of recent graduates unemployed or underemployed, our mission is to close that gap by offering guidance and coaching services that will increase the likelihood of securing employment. With our 7 years of HR and recruitment and having conducted <span>600+</span> candidate and client interviews; we aim to dispense all that knowledge to newly qualified and experienced professionals.</p>
+
+			<p>We have provided interview preparation, career coaching, CV writing and work-readiness sessions to newly qualified graduates all the way to PHD professionals with 10+ years experience. We don't teach, rather we help cultivate all that dormant potential that lies within you.</p>
+		</div>
+	</div>
+</section>
+
+<!-- Our Values -->
+<section class="values-section mb-sm-4 p-4" id="ourvalues">
+	<div class="container">
+		<div class="mb-4 mb-md-0 p-md-4 ps-md-5">
+			<h1>Our Values</h1>
+		</div>
+		<div class="row ps-md-5 pe-md-5">
+			<div class="col-md-6">
+				<h3>Growth</h3>
+				<p>Kultiv8 is derived from the word cultivate which means to try and acquire or develop (a quality or skill). We aim to nurture and grow our clients, as we continue to grow as an organization.</p>
+			</div>
+			<div class="col-md-6">
+				<h3>Trust</h3>
+				<p>We value our clients having confidence in the fairness and reliability of our offering. Without trust we cannot advocate for growth.</p>
+			</div>
+			<div class="col-md-6">
+				<h3>Innovation</h3>
+				<p>We listen, learn and seek out the best ideas. We attack complacency and continuous improvement.</p>
+			</div>
+			<div class="col-md-6">
+				<h3>Passion</h3>
+				<p>We are passionate and advocate for the personal development and advancement of every individual we interact with.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Our Services -->
+<section class="services-section mb-sm-4 p-4" id="services">
+	<div class="container">
+		<div class="mb-4 mb-md-0 p-md-4 ps-md-5">
+			<h1>Our Services</h1>
+		</div>
+		<div class="row ps-md-5 pe-md-5 g-4 pb-5">
+			<!-- Market Research / Career Guidance -->
+			<div class="col-md-6">
+				<div class="card h-100 custom-card">
+					<div class="front d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">Market Research / Career Guidance</h5>
+							<p class="card-text">Maybe you have recently changed jobs or are actively searching for a new one. Either way, you can still feel more motivated inspired and ambitious.</p>
+							<p>Allow us to identify some new trends within your industry, so that you don't come across as an 'outdated' skill.</p>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="View More">
+						</div>
+					</div>
+					<div class="back  d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">Market Research / Career Guidance</h5>
+							<div class="row mt-1">
+								<div class="col-6">Duration: </div>
+								<div class="col-6">1 hr/30 </div>
+								<div class="col-6">Price: </div>
+								<div class="col-6 text-bg-success"><strong>R400</strong> </div>
+							</div>
+							<div class="mt-1">
+								<h6>Contact us to enquire</h6>
+								<a href="https://wa.me/+27640430040?text=Hello.%20I'm%20interested%20in%20your%20Career%20Guidance%20Services">
+									<img class="icon" src="~/img/whatsapp.png">
+								</a>
+
+								<a href="mailto:name@rapidtables.com?subject=Career%20Guidance">
+									<img class="icon" src="~/img/mail.png">
+								</a>
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="Back">
+							<a href="services.html" type="button" class="btn btn-primary">View Packages</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- LinkedIn Revamp / CV Writing -->
+			<div class="col-md-6">
+				<div class="card h-100 custom-card">
+					<div class="front d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">LinkedIn Revamp / CV Writing</h5>
+							<p class="card-text">Unfortunately most aren't even afforded the opportunity to sit before an interview panel. Could your CV and LinkedIn profile be the cause of this?</p>
+							<p>
+								Let us help you revamp your career profile so that it articulates what a great candidate you are.
+							</p>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="View More">
+						</div>
+					</div>
+					<div class="back  d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">LinkedIn Revamp / CV Writing</h5>
+							<div class="row mt-1">
+								<div class="col-6">Duration: </div>
+								<div class="col-6">1 Business Day </div>
+								<div class="col-6">Price: </div>
+								<div class="col-6 text-bg-success"><strong>R200</strong> </div>
+							</div>
+							<div class="mt-3=1">
+								<h6>Contact us to enquire</h6>
+								<a href="https://wa.me/+27640430040?text=Hello.%20I'm%20interested%20in%20your%20Career%20Guidance%20Services">
+									<img class="icon" src="~/img/whatsapp.png">
+								</a>
+								<a href="mailto:name@rapidtables.com?subject=Career%20Guidance"><img class="icon" src="~/img/mail.png"></a>
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="Back">
+							<a href="services.html" type="button" class="btn btn-primary">View Packages</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Campus Seminars / Group Presentations -->
+			<div class="col-md-6 card-container">
+				<div class="card h-100 custom-card">
+					<div class="front d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">Campus Seminars / Group Presentations</h5>
+							<p class="card-text">Our vision is to partner up with tertiary institutions and host work-readiness seminars for final year students and graduates. Graduates obtain their qualifications and leave with a ton of theory and then what?</p>
+							<p>We help prepare them for a future in whichh they secure employment and implement all that theory.</p>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="View More">
+						</div>
+					</div>
+
+					<div class="back  d-flex flex-column">
+						<div class="card-body ">
+							<h5 class="card-title">Campus Seminars / Group Presentations</h5>
+							<div class="mt-3">
+								<h6>Contact us to enquire</h6>
+								<a href="https://wa.me/+27640430040?text=Hello.%20I'm%20interested%20in%20your%20Career%20Guidance%20Services">
+									<img class="icon" src="~/img/whatsapp.png">
+								</a>
+								<a href="mailto:name@rapidtables.com?subject=Career%20Guidance"><img class="icon" src="~/img/mail.png"></a>
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="Back">
+							<a href="services.html" type="button" class="btn btn-primary">View Packages</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Interview Preparation -->
+			<div class="col-md-6">
+				<div class="card h-100 custom-card">
+					<div class="front d-flex flex-column">
+						<div class="card-body">
+							<h5 class="card-title">Interview Preparation</h5>
+							<p class="card-text">Anxious about your upcoming interview or getting ready to explore the job market for opprtunities?</p>
+							<p>We are here to help! We will help you prepare and feel confident for your interview, so you can become the best version of yourself.</p>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="View More">
+						</div>
+					</div>
+					<div class="back  d-flex flex-column">
+						<div class="card-body ">
+							<h5 class="card-title">Interview Preparation</h5>
+							<div class="mt-3">
+								<h6>Contact us to enquire</h6>
+								<a href="https://wa.me/+27640430040?text=Hello.%20I'm%20interested%20in%20your%20Career%20Guidance%20Services">
+									<img class="icon" src="~/img/whatsapp.png">
+								</a>
+								<a href="mailto:name@rapidtables.com?subject=Career%20Guidance"><img class="icon" src="~/img/mail.png"></a>
+
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="button" class="btn btn-flip" value="Back">
+							<a href="services.html" type="button" class="btn btn-primary">View Packages</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section mb-sm-4 p-4" id="testimonials">
+	<div class="container">
+		<div class="mb-4 mb-md-0 p-md-4 ps-md-5">
+			<h1>Testimonials</h1>
+		</div>
+		<div class="ps-md-5 pe-md-5">
+			<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div class="carousel-indicators pt-5">
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="">
+							<h4>Tinah Matumelo Sebuse</h4>
+							<h6>Business Development and Stakeholder Relations Manager</h6>
+							<p>"I had a great interview coaching session with Tshego. It was structured and very productive. He helped me structure my responses to effectively communicate and highlight my strengths & development areas. I went into the interview comfortable and confident on how to sell my value proposition/brand. I would definitely recommend his services without hesitation!"</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="">
+							<h4>Maatla Leburu ACMA CGMA</h4>
+							<h6>Chartered Global Management Accountant | ACCA 5/13</h6>
+							<p>"Tshegofatso is a phenomenal dedicated and professional recruiter who values his clients.His deligence and devotion make him a pleasure to work with.He aims to understand clients needs and place them where they are best fit. I have worked with Tshegofatso as his client and his work ethic was invaluable. I recommend him undoubtedly for anyone's recruitment needs."</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+

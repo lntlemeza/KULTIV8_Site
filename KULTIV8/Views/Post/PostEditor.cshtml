@@ -1,0 +1,124 @@
+﻿@using System.Security.Claims;
+@using Microsoft.AspNetCore.Identity;
+@model Post
+@{
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+    Post _post = Model;
+}
+
+@*Custom Styles*@
+@{
+    @section NewPostPageStyle{
+        <style>
+            input{
+                width: 100%
+            }
+        </style>
+    }
+
+    /*Get the user in session ID for post FKey*/
+    var userInSession = User.FindFirst(ClaimTypes.NameIdentifier);
+    string userId = userInSession != null ? userInSession.Value : "";
+
+
+    var pageHeading = (_post != null && !_post.Status.Equals("draft")) ? "Update Post" : "New Post";
+}
+
+<section class="content">
+    <div class="container pt-5">
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-@(TempData["MessageType"]) alert-dismissible fade show" role="alert">
+                @TempData["Message"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <h1 class="page-heading">@pageHeading</h1>
+
+
+        <form enctype="multipart/form-data" method="post" class="form-group pt-4" asp-action="NewPost" asp-controller="Post">
+            <div class="textbox pt-3" hidden="hidden">
+                <input asp-for="Id" class="border border-secondary-subtle p-1" />
+               
+            </div>
+            <div class="form-group pb-3">
+                <label class="control-label pb-3" asp-for="CoverPhoto"></label>
+                <div>
+                    <input asp-for="CoverPhoto" class="custom-file-input"
+                           onchange="document.getElementById('CoverPreView').src = window.URL.createObjectURL(this.files[0])" />
+                 
+                       </div>
+            </div>
+            <span asp-validation-for="CoverPhoto"></span>
+
+            @if (_post != null)
+            {
+                <img id="CoverPreView" src="@_post.PhotoUrl" class="rounded" width="200" height="200" style="border:1px" />
+                <input asp-for="PhotoUrl" value="@_post.PhotoUrl" hidden="hidden" />
+            }
+            else
+            {
+                <img id="CoverPreView" src="" class="rounded" width="200" height="200" style="border:1px" />
+            }
+
+
+
+            <div class="textbox pt-3">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="border border-secondary-subtle p-1" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            
+
+            @*<div class="textbox pt-3">
+                <label>Category</label>
+                <input class="border border-secondary-subtle p-1" />
+            </div>*@
+
+            <div class="textbox pt-3">
+                <label asp-for="Content"></label>
+                <textarea asp-for="Content" id="editor" rows="20"> </textarea>
+            
+            </div>
+            <span class="text-danger" asp-validation-for="Content"></span>
+
+
+            <input asp-for="Status" hidden="hidden" />
+            <input asp-for="DatePublished" hidden="hidden" />
+            <input asp-for="LastUpdate" hidden="hidden" />
+            <input asp-for="AuthorId" hidden="hidden" value=@userId/>
+
+            @if (_post != null && !_post.Status.Equals("draft"))
+            {
+                <div class="pt-5 pb-5 row d-flex justify-content-between">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success" asp-action="UpdatePost" asp-controller="Post">Update Post</button>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="pt-5 row d-flex justify-content-between">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success" formmethod="post" name="action" value="published" >Publish</button>
+                    </div>
+
+                    <div class="col-6 justify-content-end">
+                        <button type="submit" class="btn btn-secondary float-end" formmethod="post" name="action" value="draft" >Save AS Draft</button>
+                    </div>
+
+                </div>
+            }
+
+        </form>
+
+
+
+
+    </div>
+</section>
+
+
